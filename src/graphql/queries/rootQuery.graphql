@@ -1,0 +1,5 @@
+# import User from "../types/user.graphql"
+
+type rootQuery {
+    users: [User]!
+}

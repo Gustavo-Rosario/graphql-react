@@ -1,5 +1,9 @@
-# import User from "../types/user.graphql"
+# import User, UserInput from "../types/user.graphql"
 
-type rootQuery {
+type Query {
     users: [User]!
+}
+
+type Mutation {
+    createUser(userInput: UserInput): User
 }

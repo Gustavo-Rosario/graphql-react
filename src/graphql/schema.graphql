@@ -1,5 +1,0 @@
-# import User from "types/user.graphql"
-
-type Query {
-    users: [User]!
-}

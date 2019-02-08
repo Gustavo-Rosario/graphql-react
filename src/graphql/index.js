@@ -1,14 +1,11 @@
-import {
-    importSchema
-} from 'graphql-import'
-import {
-    makeExecutableSchema
-} from 'graphql-tools'
-import rv from './queries/rootValue'
+import { importSchema } from 'graphql-import'
+import { makeExecutableSchema } from 'graphql-tools'
+import resolvers from './resolvers'
 
-const schemaGQL = importSchema('schema.graphql')
+const typeDefs = importSchema('./src/graphql/queries/rootQuery.graphql')
 
-export const schema = makeExecutableSchema({
-    schemaGQL,
-    rv
+export const GraphQlSchema = makeExecutableSchema({
+    typeDefs
 })
+
+export const GraphQlResolvers = resolvers
